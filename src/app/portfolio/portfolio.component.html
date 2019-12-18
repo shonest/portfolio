@@ -1,0 +1,22 @@
+<section id="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="tittle-text mb-5">My Portfolio</h3>
+                <div class="btn-group mb-5">
+                    <a class="primary-btn mr-3 text-decoration-none shadow " [class.active]="selectedPortfolio=='all'" (click)="onClickAll()" >All</a>
+                    <a class="primary-btn mr-3 text-decoration-none shadow " [class.active]="selectedPortfolio=='web'" (click)="onClickWeb()">websites</a>
+                    <a class="primary-btn mr-3 text-decoration-none shadow " [class.active]="selectedPortfolio=='design'" (click)="onClickdesign()">designs</a>
+                    <a class="primary-btn mr-3 text-decoration-none shadow " [class.active]="selectedPortfolio=='graphic'"  (click)="onClickGraphic()">graphics</a>
+                    <a class="primary-btn mr-3 text-decoration-none shadow " [class.active]="selectedPortfolio=='banner'" (click)="onClickBanner()">banner</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" *ngFor="let item of list">
+                <div class="web">
+                   <img [src]="item" class="img-fluid">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
